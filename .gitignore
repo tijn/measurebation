@@ -1,0 +1,20 @@
+*.orig
+
+# gems in pkg/ directories
+/pkg/*.gem
+
+# the doc-directory
+*/doc/*
+
+# OS X specific files
+*.DS_Store
+
+# the backup-files Kate (KDE) writes on my system
+.*~
+
+# dot-directory files
+.directory
+*/.directory
+
+.yardoc
+
