@@ -1,5 +1,3 @@
-*.orig
-
 # gems in pkg/ directories
 /pkg/*.gem
 
