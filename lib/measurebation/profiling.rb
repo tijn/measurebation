@@ -21,8 +21,8 @@ module Measurebation
     puts 'start profiling...'
     Memprof.start
     x = yield
-    puts Memprof.stats
-    result = Memprof.stop
+    Memprof.stats
+    Memprof.stop
     exit if options[:exit_after_first_run]
     x
   end

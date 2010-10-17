@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = %q{measurebation}
-  s.version = "0.0.2"
+  s.version = "0.0.3"
   s.date = %q{2010-10-17}
   s.authors = ["Tijn Schuurmans"]
   s.email = %q{tijn@soocial.com}
