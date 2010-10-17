@@ -11,20 +11,7 @@ task :flog do
   flog "lib", "lib"
 end
 
-gem_spec = Gem::Specification.new do |s|
-  s.name = %q{measurebation}
-  s.version = "0.0.1"
-  s.date = %q{2010-06-12}
-  s.authors = ["Tijn Schuurmans"]
-  s.email = %q{tijn@soocial.com}
-  s.summary = %q{simple measurement tools for Ruby objects}
-  s.description = %q{simple measurement tools for Ruby objects}
-  s.add_dependency ("ruby-prof")
-  s.files = FileList.new do |fl|
-    fl.include("{lib}/**/*")
-  end
-end
-
+gem_spec = eval(File.read('measurebation.gemspec'))
 Rake::GemPackageTask.new(gem_spec) do |pkg|
   pkg.need_tar_bz2 = true
   pkg.need_zip = true
