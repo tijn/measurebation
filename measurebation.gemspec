@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
   s.description = %q{simple measurement tools for Ruby objects}
   s.add_dependency("ruby-prof")
   s.add_dependency("memprof")
+  s.add_dependency("faster_csv")
   s.files = Dir["lib/**/*"]
 end
 
