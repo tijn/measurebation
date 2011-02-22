@@ -11,8 +11,8 @@ module Measurebation
     attr_reader :range, :binsize, :bins, :smaller, :bigger
     attr_accessor :caption
 
-    def initialize(range, binsize)
-      @caption = ""
+    def initialize(range, binsize, options = {})
+      @caption = options[:caption] || ""
       @range = range
       @binsize = binsize.to_i
 
