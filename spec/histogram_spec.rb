@@ -22,7 +22,7 @@ describe Histogram do
   end
 
   it "should be able to values" do
-    @h.to_s.split("\n").size.should == 102
+    @h.to_s.split("\n").size.should == 103
   end
 
 end

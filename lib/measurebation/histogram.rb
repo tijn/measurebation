@@ -9,8 +9,10 @@ module Measurebation
 
   class Histogram
     attr_reader :range, :binsize, :bins, :smaller, :bigger
+    attr_accessor :caption
 
     def initialize(range, binsize)
+      @caption = ""
       @range = range
       @binsize = binsize.to_i
 
@@ -42,6 +44,7 @@ module Measurebation
     def to_s
       require 'faster_csv'
       csv_string = FasterCSV.generate do |csv|
+        csv << @caption
         to_a.each { |line| csv << line }
       end
     end
