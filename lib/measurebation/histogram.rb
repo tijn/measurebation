@@ -24,7 +24,7 @@ module Measurebation
     def count(num)
       if num < @range.first
         @smaller += 1
-      elsif num > @range.last
+      elsif num >= @range.last
         @bigger += 1
       else
         @bins[(num - @range.first)/@binsize] += 1
