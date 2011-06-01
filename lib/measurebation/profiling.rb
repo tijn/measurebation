@@ -15,6 +15,7 @@ module Measurebation
     x
   end
 
+  # will not work for Ruby >= 1.9
   def self.memprof!(options = {})
     require 'memprof'
     raise "profile what?!" unless block_given?
