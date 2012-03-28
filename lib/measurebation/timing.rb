@@ -5,9 +5,12 @@ module Measurebation
     base.extend(ClassMethods)
   end
 
-  def log_measurement!(name, value)
+  def measurements
     @measurements ||= {}
-    @measurements[name.to_sym] = value
+  end
+
+  def log_measurement!(name, value)
+    measurements[name.to_sym] = value
   end
 
   def measure_time(name, &block)
@@ -26,13 +29,16 @@ module Measurebation
     x
   end
 
-  def start_time_measure(name)
+  def time_measures
     @time_measures ||= {}
-    @time_measures[name.to_sym] = Time.now
+  end
+
+  def start_time_measure(name)
+    time_measures[name.to_sym] = Time.now
   end
 
   def stop_time_measure(name)
-    starting_time = @time_measures[name.to_sym]
+    starting_time = time_measures[name.to_sym]
     # rescue will have the effect that we don't log anything, normally I'd say fail early and hard, but logging is less important than processing the messages
     processing_time = Time.now - starting_time rescue nil
     log_measurement!(name, processing_time)

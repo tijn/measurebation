@@ -42,8 +42,8 @@ module Measurebation
     end
 
     def to_s
-      require 'faster_csv'
-      csv_string = FasterCSV.generate do |csv|
+      require 'csv'
+      csv_string = CSV.generate do |csv|
         csv << [Date.today.to_s, @caption]
         to_a.each { |line| csv << line }
       end

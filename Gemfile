@@ -1,7 +1,7 @@
 source "http://rubygems.org"
 
-gem "fastercsv"
-gem 'memprof'
+# gem "fastercsv"
+# gem 'memprof'
 gem 'ruby-prof'
 
 group :test do
