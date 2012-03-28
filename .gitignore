@@ -9,6 +9,7 @@
 
 # the backup-files Kate (KDE) writes on my system
 .*~
+.bundle
 
 # dot-directory files
 .directory
