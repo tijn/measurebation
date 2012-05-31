@@ -10,7 +10,7 @@ module Measurebation
   end
 
   def log_measurement!(name, value)
-    measurements[name.to_sym] = value
+    measurements[name.to_s] = value
   end
 
   def measure_time(name, &block)
@@ -34,11 +34,11 @@ module Measurebation
   end
 
   def start_time_measure(name)
-    time_measures[name.to_sym] = Time.now
+    time_measures[name.to_s] = Time.now
   end
 
   def stop_time_measure(name)
-    starting_time = time_measures[name.to_sym]
+    starting_time = time_measures[name.to_s]
     # rescue will have the effect that we don't log anything, normally I'd say fail early and hard, but logging is less important than processing the messages
     processing_time = Time.now - starting_time rescue nil
     log_measurement!(name, processing_time)
