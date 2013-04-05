@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.email = %q{tijn@soocial.com}
   s.summary = %q{simple measurement tools for Ruby objects}
   s.description = %q{simple measurement tools for Ruby objects}
-  s.add_dependency("ruby-prof")
+  s.add_dependency("ruby-prof", ">= 0.13.0")
 #   s.add_dependency("memprof")
   s.requirements << "memprof if your ruby < 1.9"
   s.add_dependency("fastercsv")
